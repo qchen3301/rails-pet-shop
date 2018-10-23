@@ -10,6 +10,9 @@ class OwnersController < ApplicationController
 
   def create
     owner = Owner.create(owner_params)
+    flash[:notice] = "whoa fellah"
+    flash[:success] = "you done deed it"
+    flash[:error] = "you done not deed nothing"
     redirect_to owner_path(owner)
   end
 
